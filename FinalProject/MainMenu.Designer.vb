@@ -22,16 +22,83 @@ Partial Class MainMenu
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        panelHeader = New Panel()
+        panelMain = New Panel()
+        btnLogin = New Button()
+        btnRegister = New Button()
+        lblTitle = New Label()
+        panelHeader.SuspendLayout()
         SuspendLayout()
+        ' 
+        ' panelHeader
+        ' 
+        panelHeader.BackColor = Color.CornflowerBlue
+        panelHeader.BackgroundImageLayout = ImageLayout.None
+        panelHeader.Controls.Add(lblTitle)
+        panelHeader.Controls.Add(btnRegister)
+        panelHeader.Controls.Add(btnLogin)
+        panelHeader.ImeMode = ImeMode.NoControl
+        panelHeader.Location = New Point(-3, -2)
+        panelHeader.Name = "panelHeader"
+        panelHeader.Size = New Size(804, 68)
+        panelHeader.TabIndex = 0
+        ' 
+        ' panelMain
+        ' 
+        panelMain.BackColor = Color.SeaShell
+        panelMain.ImeMode = ImeMode.NoControl
+        panelMain.Location = New Point(-3, 66)
+        panelMain.Name = "panelMain"
+        panelMain.Size = New Size(804, 385)
+        panelMain.TabIndex = 1
+        ' 
+        ' btnLogin
+        ' 
+        btnLogin.BackColor = Color.LightSkyBlue
+        btnLogin.Location = New Point(737, 3)
+        btnLogin.Name = "btnLogin"
+        btnLogin.Size = New Size(64, 62)
+        btnLogin.TabIndex = 0
+        btnLogin.Text = "Login"
+        btnLogin.UseVisualStyleBackColor = False
+        ' 
+        ' btnRegister
+        ' 
+        btnRegister.BackColor = Color.LightSkyBlue
+        btnRegister.Location = New Point(667, 3)
+        btnRegister.Name = "btnRegister"
+        btnRegister.Size = New Size(64, 62)
+        btnRegister.TabIndex = 1
+        btnRegister.Text = "Register"
+        btnRegister.UseVisualStyleBackColor = False
+        ' 
+        ' lblTitle
+        ' 
+        lblTitle.Font = New Font("Segoe UI", 26F, FontStyle.Bold)
+        lblTitle.Location = New Point(3, 3)
+        lblTitle.Name = "lblTitle"
+        lblTitle.Size = New Size(202, 65)
+        lblTitle.TabIndex = 3
+        lblTitle.Text = "Vet Booker"
+        lblTitle.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' MainMenu
         ' 
-        AutoScaleDimensions = New SizeF(7.0F, 15.0F)
+        AutoScaleDimensions = New SizeF(7F, 15F)
         AutoScaleMode = AutoScaleMode.Font
         ClientSize = New Size(800, 450)
+        Controls.Add(panelMain)
+        Controls.Add(panelHeader)
         Name = "MainMenu"
         Text = "MainMenu"
+        panelHeader.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
+
+    Friend WithEvents panelHeader As Panel
+    Friend WithEvents panelMain As Panel
+    Friend WithEvents btnLogin As Button
+    Friend WithEvents btnRegister As Button
+    Friend WithEvents lblTitle As Label
 
 End Class
