@@ -22,9 +22,69 @@ Partial Class BookAppointment
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Text = "BookAppointment"
+        panelMain = New Panel()
+        panelHeader = New Panel()
+        lblTitle = New Label()
+        btnRegister = New Button()
+        panelHeader.SuspendLayout()
+        SuspendLayout()
+        ' 
+        ' panelMain
+        ' 
+        panelMain.BackColor = Color.SeaShell
+        panelMain.ImeMode = ImeMode.NoControl
+        panelMain.Location = New Point(-2, 67)
+        panelMain.Name = "panelMain"
+        panelMain.Size = New Size(804, 385)
+        panelMain.TabIndex = 3
+        ' 
+        ' panelHeader
+        ' 
+        panelHeader.BackColor = Color.CornflowerBlue
+        panelHeader.BackgroundImageLayout = ImageLayout.None
+        panelHeader.Controls.Add(btnRegister)
+        panelHeader.Controls.Add(lblTitle)
+        panelHeader.ImeMode = ImeMode.NoControl
+        panelHeader.Location = New Point(-2, -1)
+        panelHeader.Name = "panelHeader"
+        panelHeader.Size = New Size(804, 68)
+        panelHeader.TabIndex = 2
+        ' 
+        ' lblTitle
+        ' 
+        lblTitle.Font = New Font("Segoe UI", 26F, FontStyle.Bold)
+        lblTitle.Location = New Point(3, 3)
+        lblTitle.Name = "lblTitle"
+        lblTitle.Size = New Size(202, 65)
+        lblTitle.TabIndex = 3
+        lblTitle.Text = "Vet Booker"
+        lblTitle.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' btnRegister
+        ' 
+        btnRegister.BackColor = Color.LightSkyBlue
+        btnRegister.Location = New Point(737, 3)
+        btnRegister.Name = "btnRegister"
+        btnRegister.Size = New Size(64, 62)
+        btnRegister.TabIndex = 5
+        btnRegister.Text = "Back"
+        btnRegister.UseVisualStyleBackColor = False
+        ' 
+        ' BookAppointment
+        ' 
+        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(800, 450)
+        Controls.Add(panelMain)
+        Controls.Add(panelHeader)
+        Name = "BookAppointment"
+        Text = "BookAppointment"
+        panelHeader.ResumeLayout(False)
+        ResumeLayout(False)
     End Sub
+
+    Friend WithEvents panelMain As Panel
+    Friend WithEvents panelHeader As Panel
+    Friend WithEvents lblTitle As Label
+    Friend WithEvents btnRegister As Button
 End Class

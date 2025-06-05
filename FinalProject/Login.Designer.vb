@@ -23,9 +23,12 @@ Partial Class Login
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         panelMain = New Panel()
+        btnLogin = New Button()
+        txtbxPassword = New TextBox()
+        txtbxUsername = New TextBox()
         panelHeader = New Panel()
         lblTitle = New Label()
-        txtbxUsername = New TextBox()
+        btnRegister = New Button()
         panelMain.SuspendLayout()
         panelHeader.SuspendLayout()
         SuspendLayout()
@@ -33,6 +36,8 @@ Partial Class Login
         ' panelMain
         ' 
         panelMain.BackColor = Color.SeaShell
+        panelMain.Controls.Add(btnLogin)
+        panelMain.Controls.Add(txtbxPassword)
         panelMain.Controls.Add(txtbxUsername)
         panelMain.ImeMode = ImeMode.NoControl
         panelMain.Location = New Point(-2, 67)
@@ -40,10 +45,42 @@ Partial Class Login
         panelMain.Size = New Size(804, 385)
         panelMain.TabIndex = 3
         ' 
+        ' btnLogin
+        ' 
+        btnLogin.BackColor = Color.LightSkyBlue
+        btnLogin.FlatStyle = FlatStyle.Flat
+        btnLogin.Location = New Point(317, 283)
+        btnLogin.Name = "btnLogin"
+        btnLogin.Size = New Size(197, 42)
+        btnLogin.TabIndex = 2
+        btnLogin.Text = "Login"
+        btnLogin.UseVisualStyleBackColor = False
+        ' 
+        ' txtbxPassword
+        ' 
+        txtbxPassword.BackColor = Color.DarkGray
+        txtbxPassword.BorderStyle = BorderStyle.None
+        txtbxPassword.Font = New Font("Segoe UI", 20F)
+        txtbxPassword.Location = New Point(253, 181)
+        txtbxPassword.Name = "txtbxPassword"
+        txtbxPassword.Size = New Size(313, 36)
+        txtbxPassword.TabIndex = 1
+        ' 
+        ' txtbxUsername
+        ' 
+        txtbxUsername.BackColor = Color.DarkGray
+        txtbxUsername.BorderStyle = BorderStyle.None
+        txtbxUsername.Font = New Font("Segoe UI", 20F)
+        txtbxUsername.Location = New Point(253, 76)
+        txtbxUsername.Name = "txtbxUsername"
+        txtbxUsername.Size = New Size(313, 36)
+        txtbxUsername.TabIndex = 0
+        ' 
         ' panelHeader
         ' 
         panelHeader.BackColor = Color.CornflowerBlue
         panelHeader.BackgroundImageLayout = ImageLayout.None
+        panelHeader.Controls.Add(btnRegister)
         panelHeader.Controls.Add(lblTitle)
         panelHeader.ImeMode = ImeMode.NoControl
         panelHeader.Location = New Point(-2, -1)
@@ -61,12 +98,15 @@ Partial Class Login
         lblTitle.Text = "Vet Booker"
         lblTitle.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' txtbxUsername
+        ' btnRegister
         ' 
-        txtbxUsername.Location = New Point(204, 50)
-        txtbxUsername.Name = "txtbxUsername"
-        txtbxUsername.Size = New Size(100, 23)
-        txtbxUsername.TabIndex = 0
+        btnRegister.BackColor = Color.LightSkyBlue
+        btnRegister.Location = New Point(737, 3)
+        btnRegister.Name = "btnRegister"
+        btnRegister.Size = New Size(64, 62)
+        btnRegister.TabIndex = 5
+        btnRegister.Text = "Back"
+        btnRegister.UseVisualStyleBackColor = False
         ' 
         ' Login
         ' 
@@ -87,4 +127,7 @@ Partial Class Login
     Friend WithEvents panelHeader As Panel
     Friend WithEvents lblTitle As Label
     Friend WithEvents txtbxUsername As TextBox
+    Friend WithEvents btnLogin As Button
+    Friend WithEvents txtbxPassword As TextBox
+    Friend WithEvents btnRegister As Button
 End Class

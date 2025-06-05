@@ -22,9 +22,93 @@ Partial Class Calendar
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        components = New System.ComponentModel.Container
-        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Text = "Calendar"
+        panelMain = New Panel()
+        btbnViewAppointment = New Button()
+        MonthCalendar1 = New MonthCalendar()
+        panelHeader = New Panel()
+        lblTitle = New Label()
+        btnRegister = New Button()
+        panelMain.SuspendLayout()
+        panelHeader.SuspendLayout()
+        SuspendLayout()
+        ' 
+        ' panelMain
+        ' 
+        panelMain.BackColor = Color.SeaShell
+        panelMain.Controls.Add(btbnViewAppointment)
+        panelMain.Controls.Add(MonthCalendar1)
+        panelMain.ImeMode = ImeMode.NoControl
+        panelMain.Location = New Point(-2, 67)
+        panelMain.Name = "panelMain"
+        panelMain.Size = New Size(804, 385)
+        panelMain.TabIndex = 3
+        ' 
+        ' btbnViewAppointment
+        ' 
+        btbnViewAppointment.Location = New Point(323, 297)
+        btbnViewAppointment.Name = "btbnViewAppointment"
+        btbnViewAppointment.Size = New Size(144, 39)
+        btbnViewAppointment.TabIndex = 8
+        btbnViewAppointment.Text = "View Appointment"
+        btbnViewAppointment.UseVisualStyleBackColor = True
+        ' 
+        ' MonthCalendar1
+        ' 
+        MonthCalendar1.Font = New Font("Segoe UI", 20F)
+        MonthCalendar1.Location = New Point(273, 103)
+        MonthCalendar1.Name = "MonthCalendar1"
+        MonthCalendar1.TabIndex = 7
+        ' 
+        ' panelHeader
+        ' 
+        panelHeader.BackColor = Color.CornflowerBlue
+        panelHeader.BackgroundImageLayout = ImageLayout.None
+        panelHeader.Controls.Add(btnRegister)
+        panelHeader.Controls.Add(lblTitle)
+        panelHeader.ImeMode = ImeMode.NoControl
+        panelHeader.Location = New Point(-2, -1)
+        panelHeader.Name = "panelHeader"
+        panelHeader.Size = New Size(804, 68)
+        panelHeader.TabIndex = 2
+        ' 
+        ' lblTitle
+        ' 
+        lblTitle.Font = New Font("Segoe UI", 26F, FontStyle.Bold)
+        lblTitle.Location = New Point(3, 3)
+        lblTitle.Name = "lblTitle"
+        lblTitle.Size = New Size(202, 65)
+        lblTitle.TabIndex = 3
+        lblTitle.Text = "Vet Booker"
+        lblTitle.TextAlign = ContentAlignment.MiddleCenter
+        ' 
+        ' btnRegister
+        ' 
+        btnRegister.BackColor = Color.LightSkyBlue
+        btnRegister.Location = New Point(737, 3)
+        btnRegister.Name = "btnRegister"
+        btnRegister.Size = New Size(64, 62)
+        btnRegister.TabIndex = 5
+        btnRegister.Text = "Back"
+        btnRegister.UseVisualStyleBackColor = False
+        ' 
+        ' Calendar
+        ' 
+        AutoScaleDimensions = New SizeF(7F, 15F)
+        AutoScaleMode = AutoScaleMode.Font
+        ClientSize = New Size(800, 450)
+        Controls.Add(panelMain)
+        Controls.Add(panelHeader)
+        Name = "Calendar"
+        Text = "Calendar"
+        panelMain.ResumeLayout(False)
+        panelHeader.ResumeLayout(False)
+        ResumeLayout(False)
     End Sub
+
+    Friend WithEvents panelMain As Panel
+    Friend WithEvents panelHeader As Panel
+    Friend WithEvents lblTitle As Label
+    Friend WithEvents MonthCalendar1 As MonthCalendar
+    Friend WithEvents btbnViewAppointment As Button
+    Friend WithEvents btnRegister As Button
 End Class
