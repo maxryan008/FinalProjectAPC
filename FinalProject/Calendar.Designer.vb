@@ -24,10 +24,10 @@ Partial Class Calendar
     Private Sub InitializeComponent()
         panelMain = New Panel()
         btbnViewAppointment = New Button()
-        MonthCalendar1 = New MonthCalendar()
+        clndrAppointments = New MonthCalendar()
         panelHeader = New Panel()
-        lblTitle = New Label()
         btnRegister = New Button()
+        lblTitle = New Label()
         panelMain.SuspendLayout()
         panelHeader.SuspendLayout()
         SuspendLayout()
@@ -36,7 +36,7 @@ Partial Class Calendar
         ' 
         panelMain.BackColor = Color.SeaShell
         panelMain.Controls.Add(btbnViewAppointment)
-        panelMain.Controls.Add(MonthCalendar1)
+        panelMain.Controls.Add(clndrAppointments)
         panelMain.ImeMode = ImeMode.NoControl
         panelMain.Location = New Point(-2, 67)
         panelMain.Name = "panelMain"
@@ -52,12 +52,12 @@ Partial Class Calendar
         btbnViewAppointment.Text = "View Appointment"
         btbnViewAppointment.UseVisualStyleBackColor = True
         ' 
-        ' MonthCalendar1
+        ' clndrAppointments
         ' 
-        MonthCalendar1.Font = New Font("Segoe UI", 20F)
-        MonthCalendar1.Location = New Point(273, 103)
-        MonthCalendar1.Name = "MonthCalendar1"
-        MonthCalendar1.TabIndex = 7
+        clndrAppointments.Font = New Font("Segoe UI", 20F)
+        clndrAppointments.Location = New Point(273, 103)
+        clndrAppointments.Name = "clndrAppointments"
+        clndrAppointments.TabIndex = 7
         ' 
         ' panelHeader
         ' 
@@ -71,16 +71,6 @@ Partial Class Calendar
         panelHeader.Size = New Size(804, 68)
         panelHeader.TabIndex = 2
         ' 
-        ' lblTitle
-        ' 
-        lblTitle.Font = New Font("Segoe UI", 26F, FontStyle.Bold)
-        lblTitle.Location = New Point(3, 3)
-        lblTitle.Name = "lblTitle"
-        lblTitle.Size = New Size(202, 65)
-        lblTitle.TabIndex = 3
-        lblTitle.Text = "Vet Booker"
-        lblTitle.TextAlign = ContentAlignment.MiddleCenter
-        ' 
         ' btnRegister
         ' 
         btnRegister.BackColor = Color.LightSkyBlue
@@ -90,6 +80,16 @@ Partial Class Calendar
         btnRegister.TabIndex = 5
         btnRegister.Text = "Back"
         btnRegister.UseVisualStyleBackColor = False
+        ' 
+        ' lblTitle
+        ' 
+        lblTitle.Font = New Font("Segoe UI", 26F, FontStyle.Bold)
+        lblTitle.Location = New Point(3, 3)
+        lblTitle.Name = "lblTitle"
+        lblTitle.Size = New Size(202, 65)
+        lblTitle.TabIndex = 3
+        lblTitle.Text = "Vet Booker"
+        lblTitle.TextAlign = ContentAlignment.MiddleCenter
         ' 
         ' Calendar
         ' 
@@ -108,7 +108,7 @@ Partial Class Calendar
     Friend WithEvents panelMain As Panel
     Friend WithEvents panelHeader As Panel
     Friend WithEvents lblTitle As Label
-    Friend WithEvents MonthCalendar1 As MonthCalendar
+    Friend WithEvents clndrAppointments As MonthCalendar
     Friend WithEvents btbnViewAppointment As Button
     Friend WithEvents btnRegister As Button
 End Class
