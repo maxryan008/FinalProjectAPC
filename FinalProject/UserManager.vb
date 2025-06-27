@@ -2,13 +2,28 @@
 Imports System.Security.Cryptography
 Imports System.Text
 
+'---------------------------------------------------------------------------------------------------------------------------------------------'
+'Title: Vet Appointment Booker'
+'Purpose: To allow easy booking and management of pets at vets'
+'Programmer: Max Ryan'
+'Version: 1.0'
+'---------------------------------------------------------------------------------------------------------------------------------------------'
+
+'---------------------------------------------------------------------------------------------------------------------------------------------'
+'Form used for managing users, allows account creation, account login, and in future account modifications
+'---------------------------------------------------------------------------------------------------------------------------------------------'
 Module UserManager
+    'The name of the user file
     Public strUserFileLocation As String = "users.csv"
+
+    'Simple hash algoriuthm for joining a value with a salt and hashing them with SHA256 encryption
     Function hashStringWithSalt(strValue As String, strSalt As String) As String
         Dim algorithm As SHA256 = SHA256.Create
         Dim hash As Byte() = (algorithm.ComputeHash(Encoding.UTF8.GetBytes(strValue + strSalt)))
         Return Convert.ToBase64String(hash)
     End Function
+
+    'This is the attempt to login method that returns true if successful and false if failed
     Function tryLoginUser(strUsername As String, strPassword As String) As Boolean
         '' check file location is not empty
         If strUserFileLocation <> "" Then
@@ -43,11 +58,11 @@ Module UserManager
                     MsgBox("Correct password and username")
                     Return True
                 Else
-                    MsgBox("Incorrect password and username")
+                    MsgBox("Username and/or password is incorrect!")
                     Return False
                 End If
             Else
-                    MsgBox("Username and/or password is incorrect!")
+                MsgBox("Username and/or password is incorrect!")
                 Return False
             End If
 
@@ -55,6 +70,7 @@ Module UserManager
         Return False
     End Function
 
+    'This is the attempt to register method that returns true if registration worked otherwise return false and failed to register
     Function tryTregisterUser(strUsername As String, strPassword As String) As Boolean
         '' check file location is not empty
         If strUserFileLocation <> "" Then
@@ -98,6 +114,7 @@ Module UserManager
     End Function
 
     ''Reference https://stackoverflow.com/questions/292254/vb6-how-do-i-make-a-random-string-of-0-9-and-a-z-of-x-characters
+    'This is a method that generates a random set of A-Z or 0-9 characters with a certain string length
     Function generateSalt(intLength As Integer) As String
         Dim strSalt As String = ""
         Randomize()
