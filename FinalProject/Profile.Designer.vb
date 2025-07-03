@@ -23,10 +23,10 @@ Partial Class Profile
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         panelMain = New Panel()
-        panelHeader = New Panel()
-        lblTitle = New Label()
-        btnRegister = New Button()
         Label1 = New Label()
+        panelHeader = New Panel()
+        btnBack = New Button()
+        lblTitle = New Label()
         panelMain.SuspendLayout()
         panelHeader.SuspendLayout()
         SuspendLayout()
@@ -41,17 +41,36 @@ Partial Class Profile
         panelMain.Size = New Size(804, 385)
         panelMain.TabIndex = 3
         ' 
+        ' Label1
+        ' 
+        Label1.AutoSize = True
+        Label1.Location = New Point(14, 12)
+        Label1.Name = "Label1"
+        Label1.Size = New Size(41, 15)
+        Label1.TabIndex = 6
+        Label1.Text = "Label1"
+        ' 
         ' panelHeader
         ' 
         panelHeader.BackColor = Color.CornflowerBlue
         panelHeader.BackgroundImageLayout = ImageLayout.None
-        panelHeader.Controls.Add(btnRegister)
+        panelHeader.Controls.Add(btnBack)
         panelHeader.Controls.Add(lblTitle)
         panelHeader.ImeMode = ImeMode.NoControl
         panelHeader.Location = New Point(-2, -1)
         panelHeader.Name = "panelHeader"
         panelHeader.Size = New Size(804, 68)
         panelHeader.TabIndex = 2
+        ' 
+        ' btnBack
+        ' 
+        btnBack.BackColor = Color.LightSkyBlue
+        btnBack.Location = New Point(737, 3)
+        btnBack.Name = "btnBack"
+        btnBack.Size = New Size(64, 62)
+        btnBack.TabIndex = 5
+        btnBack.Text = "Back"
+        btnBack.UseVisualStyleBackColor = False
         ' 
         ' lblTitle
         ' 
@@ -62,25 +81,6 @@ Partial Class Profile
         lblTitle.TabIndex = 3
         lblTitle.Text = "Vet Booker"
         lblTitle.TextAlign = ContentAlignment.MiddleCenter
-        ' 
-        ' btnRegister
-        ' 
-        btnRegister.BackColor = Color.LightSkyBlue
-        btnRegister.Location = New Point(737, 3)
-        btnRegister.Name = "btnRegister"
-        btnRegister.Size = New Size(64, 62)
-        btnRegister.TabIndex = 5
-        btnRegister.Text = "Back"
-        btnRegister.UseVisualStyleBackColor = False
-        ' 
-        ' Label1
-        ' 
-        Label1.AutoSize = True
-        Label1.Location = New Point(14, 12)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(41, 15)
-        Label1.TabIndex = 6
-        Label1.Text = "Label1"
         ' 
         ' Profile
         ' 
@@ -100,6 +100,6 @@ Partial Class Profile
     Friend WithEvents panelMain As Panel
     Friend WithEvents panelHeader As Panel
     Friend WithEvents lblTitle As Label
-    Friend WithEvents btnRegister As Button
+    Friend WithEvents btnBack As Button
     Friend WithEvents Label1 As Label
 End Class

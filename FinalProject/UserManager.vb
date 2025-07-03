@@ -31,12 +31,14 @@ Module UserManager
             If Not File.Exists(strUserFileLocation) Then
                 File.Create(strUserFileLocation).Close()
             End If
+            '' stream reader open
             Dim srUserFile As New StreamReader(strUserFileLocation)
             Dim i As Integer = 0
             Dim boolFoundUser = False
             Dim userDetails() As String
             Do Until srUserFile.EndOfStream
                 Dim line() As String = srUserFile.ReadLine.Split(",")
+                '' line must have correct length to be valid
                 If line.Length = 8 Then
                     If strUsername = line(2) Then
                         boolFoundUser = True
@@ -46,16 +48,24 @@ Module UserManager
                 End If
                 i += 1
             Loop
+            '' close stream reader
             srUserFile.Close()
 
             If boolFoundUser = True Then
+                '' get user salt and hashed password
                 Dim strSalt As String = userDetails(5)
                 Dim strHashedPassword As String = userDetails(4)
 
                 Dim strUserInputHashed As String = hashStringWithSalt(strPassword, strSalt)
-
+                '' check if expected password matches inputs
                 If strUserInputHashed = strHashedPassword Then
                     MsgBox("Correct password and username")
+                    MainMenu.session = New UserSession()
+                    If Not IsNumeric(userDetails(6)) Then
+                        '' fall back to 0
+                        userDetails(6) = "0"
+                    End If
+                    MainMenu.session.data = New UserData(userDetails(0), userDetails(1), userDetails(2), userDetails(3), userDetails(4), userDetails(5), CInt(userDetails(6)), userDetails(7))
                     Return True
                 Else
                     MsgBox("Username and/or password is incorrect!")

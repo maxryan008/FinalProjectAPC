@@ -16,7 +16,10 @@ Public Class Login
     Private Sub btnLogin_Click(sender As Object, e As EventArgs) Handles btnLogin.Click
         If intType = 0 Then
             'attempt to login with username and password
-            MsgBox(UserManager.tryLoginUser(txtUsername.Text, txtPassword.Text))
+            Dim boolLoggedIn As Boolean = UserManager.tryLoginUser(txtUsername.Text, txtPassword.Text)
+            If (boolLoggedIn) Then
+                FormRedirectionManager.redirectAndClose(Me, MainMenu)
+            End If
         ElseIf intType = 1 Then
             'attempt to register with username and password
             '(In future this will take more than just username and password. email, name etc)

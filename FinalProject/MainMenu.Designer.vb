@@ -23,6 +23,7 @@ Partial Class MainMenu
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         panelHeader = New Panel()
+        btnLogout = New Button()
         lblTitle = New Label()
         btnProfile = New Button()
         btnRegister = New Button()
@@ -41,6 +42,7 @@ Partial Class MainMenu
         ' 
         panelHeader.BackColor = Color.CornflowerBlue
         panelHeader.BackgroundImageLayout = ImageLayout.None
+        panelHeader.Controls.Add(btnLogout)
         panelHeader.Controls.Add(lblTitle)
         panelHeader.Controls.Add(btnProfile)
         panelHeader.Controls.Add(btnRegister)
@@ -50,6 +52,16 @@ Partial Class MainMenu
         panelHeader.Name = "panelHeader"
         panelHeader.Size = New Size(804, 68)
         panelHeader.TabIndex = 0
+        ' 
+        ' btnLogout
+        ' 
+        btnLogout.BackColor = Color.LightSkyBlue
+        btnLogout.Location = New Point(737, 3)
+        btnLogout.Name = "btnLogout"
+        btnLogout.Size = New Size(64, 62)
+        btnLogout.TabIndex = 4
+        btnLogout.Text = "Logout"
+        btnLogout.UseVisualStyleBackColor = False
         ' 
         ' lblTitle
         ' 
@@ -64,9 +76,9 @@ Partial Class MainMenu
         ' btnProfile
         ' 
         btnProfile.BackColor = Color.LightSkyBlue
-        btnProfile.Location = New Point(552, 15)
+        btnProfile.Location = New Point(667, 3)
         btnProfile.Name = "btnProfile"
-        btnProfile.Size = New Size(109, 38)
+        btnProfile.Size = New Size(64, 62)
         btnProfile.TabIndex = 3
         btnProfile.Text = "Profile"
         btnProfile.UseVisualStyleBackColor = False
@@ -180,5 +192,6 @@ Partial Class MainMenu
     Friend WithEvents btnBookAppointment As Button
     Friend WithEvents btnCalender As Button
     Friend WithEvents btnAllVets As Button
+    Friend WithEvents btnLogout As Button
 
 End Class
