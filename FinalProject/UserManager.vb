@@ -81,7 +81,7 @@ Module UserManager
     End Function
 
     'This is the attempt to register method that returns true if registration worked otherwise return false and failed to register
-    Function tryTregisterUser(strUsername As String, strPassword As String) As Boolean
+    Function tryTregisterUser(strUsername As String, strPassword As String, strName As String, strSurname As String, strEmail As String, strAge As String) As Boolean
         '' check file location is not empty
         If strUserFileLocation <> "" Then
             '' check if file exists
@@ -112,7 +112,7 @@ Module UserManager
 
             Dim swUserFile As New StreamWriter(strUserFileLocation, True)
 
-            swUserFile.WriteLine("name" + "," + "surname" + "," + strUsername + "," + "email" + "," + strHashedPassword + "," + strSalt + "," + "age" + "," + "accountType")
+            swUserFile.WriteLine(strName + "," + strSurname + "," + strUsername + "," + strEmail + "," + strHashedPassword + "," + strSalt + "," + strAge + "," + "User")
 
             swUserFile.Close()
 

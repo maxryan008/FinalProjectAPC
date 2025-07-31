@@ -23,8 +23,16 @@ Partial Class Login
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         panelMain = New Panel()
-        Label2 = New Label()
-        Label1 = New Label()
+        lblAge = New Label()
+        lblEmail = New Label()
+        lblSurname = New Label()
+        lblName = New Label()
+        txtAge = New TextBox()
+        txtEmail = New TextBox()
+        txtSurname = New TextBox()
+        txtName = New TextBox()
+        lblPassword = New Label()
+        lblUsername = New Label()
         btnLogin = New Button()
         txtPassword = New TextBox()
         txtUsername = New TextBox()
@@ -38,8 +46,16 @@ Partial Class Login
         ' panelMain
         ' 
         panelMain.BackColor = Color.SeaShell
-        panelMain.Controls.Add(Label2)
-        panelMain.Controls.Add(Label1)
+        panelMain.Controls.Add(lblAge)
+        panelMain.Controls.Add(lblEmail)
+        panelMain.Controls.Add(lblSurname)
+        panelMain.Controls.Add(lblName)
+        panelMain.Controls.Add(txtAge)
+        panelMain.Controls.Add(txtEmail)
+        panelMain.Controls.Add(txtSurname)
+        panelMain.Controls.Add(txtName)
+        panelMain.Controls.Add(lblPassword)
+        panelMain.Controls.Add(lblUsername)
         panelMain.Controls.Add(btnLogin)
         panelMain.Controls.Add(txtPassword)
         panelMain.Controls.Add(txtUsername)
@@ -49,25 +65,105 @@ Partial Class Login
         panelMain.Size = New Size(804, 385)
         panelMain.TabIndex = 3
         ' 
-        ' Label2
+        ' lblAge
         ' 
-        Label2.AutoSize = True
-        Label2.Font = New Font("Segoe UI", 20F)
-        Label2.Location = New Point(111, 181)
-        Label2.Name = "Label2"
-        Label2.Size = New Size(134, 37)
-        Label2.TabIndex = 4
-        Label2.Text = "Password:"
+        lblAge.AutoSize = True
+        lblAge.Font = New Font("Segoe UI", 20F)
+        lblAge.Location = New Point(276, 213)
+        lblAge.Name = "lblAge"
+        lblAge.Size = New Size(70, 37)
+        lblAge.TabIndex = 12
+        lblAge.Text = "Age:"
         ' 
-        ' Label1
+        ' lblEmail
         ' 
-        Label1.AutoSize = True
-        Label1.Font = New Font("Segoe UI", 20F)
-        Label1.Location = New Point(105, 75)
-        Label1.Name = "Label1"
-        Label1.Size = New Size(142, 37)
-        Label1.TabIndex = 3
-        Label1.Text = "Username:"
+        lblEmail.AutoSize = True
+        lblEmail.Font = New Font("Segoe UI", 20F)
+        lblEmail.Location = New Point(159, 171)
+        lblEmail.Name = "lblEmail"
+        lblEmail.Size = New Size(88, 37)
+        lblEmail.TabIndex = 11
+        lblEmail.Text = "Email:"
+        ' 
+        ' lblSurname
+        ' 
+        lblSurname.AutoSize = True
+        lblSurname.Font = New Font("Segoe UI", 20F)
+        lblSurname.Location = New Point(120, 127)
+        lblSurname.Name = "lblSurname"
+        lblSurname.Size = New Size(127, 37)
+        lblSurname.TabIndex = 10
+        lblSurname.Text = "Surname:"
+        ' 
+        ' lblName
+        ' 
+        lblName.AutoSize = True
+        lblName.Font = New Font("Segoe UI", 20F)
+        lblName.Location = New Point(153, 90)
+        lblName.Name = "lblName"
+        lblName.Size = New Size(94, 37)
+        lblName.TabIndex = 9
+        lblName.Text = "Name:"
+        ' 
+        ' txtAge
+        ' 
+        txtAge.BackColor = Color.DarkGray
+        txtAge.BorderStyle = BorderStyle.None
+        txtAge.Font = New Font("Segoe UI", 20F)
+        txtAge.Location = New Point(352, 216)
+        txtAge.Name = "txtAge"
+        txtAge.Size = New Size(125, 36)
+        txtAge.TabIndex = 8
+        ' 
+        ' txtEmail
+        ' 
+        txtEmail.BackColor = Color.DarkGray
+        txtEmail.BorderStyle = BorderStyle.None
+        txtEmail.Font = New Font("Segoe UI", 20F)
+        txtEmail.Location = New Point(253, 174)
+        txtEmail.Name = "txtEmail"
+        txtEmail.Size = New Size(313, 36)
+        txtEmail.TabIndex = 7
+        ' 
+        ' txtSurname
+        ' 
+        txtSurname.BackColor = Color.DarkGray
+        txtSurname.BorderStyle = BorderStyle.None
+        txtSurname.Font = New Font("Segoe UI", 20F)
+        txtSurname.Location = New Point(253, 132)
+        txtSurname.Name = "txtSurname"
+        txtSurname.Size = New Size(313, 36)
+        txtSurname.TabIndex = 6
+        ' 
+        ' txtName
+        ' 
+        txtName.BackColor = Color.DarkGray
+        txtName.BorderStyle = BorderStyle.None
+        txtName.Font = New Font("Segoe UI", 20F)
+        txtName.Location = New Point(253, 90)
+        txtName.Name = "txtName"
+        txtName.Size = New Size(313, 36)
+        txtName.TabIndex = 5
+        ' 
+        ' lblPassword
+        ' 
+        lblPassword.AutoSize = True
+        lblPassword.Font = New Font("Segoe UI", 20F)
+        lblPassword.Location = New Point(113, 47)
+        lblPassword.Name = "lblPassword"
+        lblPassword.Size = New Size(134, 37)
+        lblPassword.TabIndex = 4
+        lblPassword.Text = "Password:"
+        ' 
+        ' lblUsername
+        ' 
+        lblUsername.AutoSize = True
+        lblUsername.Font = New Font("Segoe UI", 20F)
+        lblUsername.Location = New Point(105, 6)
+        lblUsername.Name = "lblUsername"
+        lblUsername.Size = New Size(142, 37)
+        lblUsername.TabIndex = 3
+        lblUsername.Text = "Username:"
         ' 
         ' btnLogin
         ' 
@@ -85,7 +181,7 @@ Partial Class Login
         txtPassword.BackColor = Color.DarkGray
         txtPassword.BorderStyle = BorderStyle.None
         txtPassword.Font = New Font("Segoe UI", 20F)
-        txtPassword.Location = New Point(253, 181)
+        txtPassword.Location = New Point(253, 48)
         txtPassword.Name = "txtPassword"
         txtPassword.PasswordChar = "*"c
         txtPassword.Size = New Size(313, 36)
@@ -96,7 +192,7 @@ Partial Class Login
         txtUsername.BackColor = Color.DarkGray
         txtUsername.BorderStyle = BorderStyle.None
         txtUsername.Font = New Font("Segoe UI", 20F)
-        txtUsername.Location = New Point(253, 76)
+        txtUsername.Location = New Point(253, 6)
         txtUsername.Name = "txtUsername"
         txtUsername.Size = New Size(313, 36)
         txtUsername.TabIndex = 0
@@ -155,6 +251,14 @@ Partial Class Login
     Friend WithEvents btnLogin As Button
     Friend WithEvents txtPassword As TextBox
     Friend WithEvents btnBack As Button
-    Friend WithEvents Label1 As Label
-    Friend WithEvents Label2 As Label
+    Friend WithEvents lblUsername As Label
+    Friend WithEvents lblPassword As Label
+    Friend WithEvents lblAge As Label
+    Friend WithEvents lblEmail As Label
+    Friend WithEvents lblSurname As Label
+    Friend WithEvents lblName As Label
+    Friend WithEvents txtAge As TextBox
+    Friend WithEvents txtEmail As TextBox
+    Friend WithEvents txtSurname As TextBox
+    Friend WithEvents txtName As TextBox
 End Class

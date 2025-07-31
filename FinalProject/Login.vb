@@ -22,8 +22,11 @@ Public Class Login
             End If
         ElseIf intType = 1 Then
             'attempt to register with username and password
-            '(In future this will take more than just username and password. email, name etc)
-            Dim boolRegistered As Boolean = UserManager.tryTregisterUser(txtUsername.Text, txtPassword.Text)
+            If txtUsername.Text = "" Then
+                MsgBox("Please enter a valid username")
+                Return
+            End If
+            Dim boolRegistered As Boolean = UserManager.tryTregisterUser(txtUsername.Text, txtPassword.Text, txtName.Text, txtSurname.Text, txtEmail.Text, txtAge.Text)
             FormRedirectionManager.redirectAndClose(Me, MainMenu)
         Else
             'type out of range so redirect to mainmenu and invalidate the form.

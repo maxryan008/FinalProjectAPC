@@ -23,6 +23,18 @@ Module FormRedirectionManager
         If intArgument = 0 Then
             'Login form creation
             Dim frmLogin = New Login
+            frmLogin.txtName.Visible = False
+            frmLogin.txtSurname.Visible = False
+            frmLogin.txtEmail.Visible = False
+            frmLogin.txtAge.Visible = False
+            frmLogin.lblName.Visible = False
+            frmLogin.lblSurname.Visible = False
+            frmLogin.lblEmail.Visible = False
+            frmLogin.lblAge.Visible = False
+            frmLogin.txtPassword.Location = New Point(253, 157)
+            frmLogin.lblPassword.Location = New Point(113, 157)
+            frmLogin.txtUsername.Location = New Point(253, 60)
+            frmLogin.lblUsername.Location = New Point(105, 60)
             frmLogin.Text = "Login Form"
             frmLogin.intType = 0
             'Call a redirect to redirect from current to the new form instance
@@ -31,6 +43,7 @@ Module FormRedirectionManager
         ElseIf intArgument = 1 Then
             'Register form creation
             Dim frmRegister = New Login
+            frmRegister.txtPassword.PasswordChar = "﷽"
             frmRegister.btnLogin.Text = "Register"
             frmRegister.Text = "Register Form"
             frmRegister.intType = 1
