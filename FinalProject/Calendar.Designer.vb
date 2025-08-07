@@ -26,7 +26,7 @@ Partial Class Calendar
         btbnViewAppointment = New Button()
         clndrAppointments = New MonthCalendar()
         panelHeader = New Panel()
-        btnRegister = New Button()
+        btnBack = New Button()
         lblTitle = New Label()
         panelMain.SuspendLayout()
         panelHeader.SuspendLayout()
@@ -63,7 +63,7 @@ Partial Class Calendar
         ' 
         panelHeader.BackColor = Color.CornflowerBlue
         panelHeader.BackgroundImageLayout = ImageLayout.None
-        panelHeader.Controls.Add(btnRegister)
+        panelHeader.Controls.Add(btnBack)
         panelHeader.Controls.Add(lblTitle)
         panelHeader.ImeMode = ImeMode.NoControl
         panelHeader.Location = New Point(-2, -1)
@@ -71,15 +71,15 @@ Partial Class Calendar
         panelHeader.Size = New Size(804, 68)
         panelHeader.TabIndex = 2
         ' 
-        ' btnRegister
+        ' btnBack
         ' 
-        btnRegister.BackColor = Color.LightSkyBlue
-        btnRegister.Location = New Point(737, 3)
-        btnRegister.Name = "btnRegister"
-        btnRegister.Size = New Size(64, 62)
-        btnRegister.TabIndex = 5
-        btnRegister.Text = "Back"
-        btnRegister.UseVisualStyleBackColor = False
+        btnBack.BackColor = Color.LightSkyBlue
+        btnBack.Location = New Point(737, 3)
+        btnBack.Name = "btnBack"
+        btnBack.Size = New Size(64, 62)
+        btnBack.TabIndex = 5
+        btnBack.Text = "Back"
+        btnBack.UseVisualStyleBackColor = False
         ' 
         ' lblTitle
         ' 
@@ -110,5 +110,5 @@ Partial Class Calendar
     Friend WithEvents lblTitle As Label
     Friend WithEvents clndrAppointments As MonthCalendar
     Friend WithEvents btbnViewAppointment As Button
-    Friend WithEvents btnRegister As Button
+    Friend WithEvents btnBack As Button
 End Class

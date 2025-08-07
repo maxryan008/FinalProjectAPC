@@ -24,14 +24,21 @@ Partial Class BookAppointment
     Private Sub InitializeComponent()
         panelMain = New Panel()
         panelHeader = New Panel()
+        btnBack = New Button()
         lblTitle = New Label()
-        btnRegister = New Button()
+        lblSubheading = New Label()
+        dtpDate = New DateTimePicker()
+        btnCheckAvailability = New Button()
+        panelMain.SuspendLayout()
         panelHeader.SuspendLayout()
         SuspendLayout()
         ' 
         ' panelMain
         ' 
         panelMain.BackColor = Color.SeaShell
+        panelMain.Controls.Add(btnCheckAvailability)
+        panelMain.Controls.Add(dtpDate)
+        panelMain.Controls.Add(lblSubheading)
         panelMain.ImeMode = ImeMode.NoControl
         panelMain.Location = New Point(-2, 67)
         panelMain.Name = "panelMain"
@@ -42,13 +49,23 @@ Partial Class BookAppointment
         ' 
         panelHeader.BackColor = Color.CornflowerBlue
         panelHeader.BackgroundImageLayout = ImageLayout.None
-        panelHeader.Controls.Add(btnRegister)
+        panelHeader.Controls.Add(btnBack)
         panelHeader.Controls.Add(lblTitle)
         panelHeader.ImeMode = ImeMode.NoControl
         panelHeader.Location = New Point(-2, -1)
         panelHeader.Name = "panelHeader"
         panelHeader.Size = New Size(804, 68)
         panelHeader.TabIndex = 2
+        ' 
+        ' btnBack
+        ' 
+        btnBack.BackColor = Color.LightSkyBlue
+        btnBack.Location = New Point(737, 3)
+        btnBack.Name = "btnBack"
+        btnBack.Size = New Size(64, 62)
+        btnBack.TabIndex = 5
+        btnBack.Text = "Back"
+        btnBack.UseVisualStyleBackColor = False
         ' 
         ' lblTitle
         ' 
@@ -60,15 +77,31 @@ Partial Class BookAppointment
         lblTitle.Text = "Vet Booker"
         lblTitle.TextAlign = ContentAlignment.MiddleCenter
         ' 
-        ' btnRegister
+        ' lblSubheading
         ' 
-        btnRegister.BackColor = Color.LightSkyBlue
-        btnRegister.Location = New Point(737, 3)
-        btnRegister.Name = "btnRegister"
-        btnRegister.Size = New Size(64, 62)
-        btnRegister.TabIndex = 5
-        btnRegister.Text = "Back"
-        btnRegister.UseVisualStyleBackColor = False
+        lblSubheading.AutoSize = True
+        lblSubheading.Font = New Font("Segoe UI", 15F, FontStyle.Bold)
+        lblSubheading.Location = New Point(284, 69)
+        lblSubheading.Name = "lblSubheading"
+        lblSubheading.Size = New Size(223, 28)
+        lblSubheading.TabIndex = 0
+        lblSubheading.Text = "Book An Appointment"
+        ' 
+        ' dtpDate
+        ' 
+        dtpDate.Location = New Point(296, 100)
+        dtpDate.Name = "dtpDate"
+        dtpDate.Size = New Size(200, 23)
+        dtpDate.TabIndex = 1
+        ' 
+        ' btnCheckAvailability
+        ' 
+        btnCheckAvailability.Location = New Point(324, 129)
+        btnCheckAvailability.Name = "btnCheckAvailability"
+        btnCheckAvailability.Size = New Size(142, 23)
+        btnCheckAvailability.TabIndex = 2
+        btnCheckAvailability.Text = "Check Date Availability"
+        btnCheckAvailability.UseVisualStyleBackColor = True
         ' 
         ' BookAppointment
         ' 
@@ -79,6 +112,8 @@ Partial Class BookAppointment
         Controls.Add(panelHeader)
         Name = "BookAppointment"
         Text = "BookAppointment"
+        panelMain.ResumeLayout(False)
+        panelMain.PerformLayout()
         panelHeader.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
@@ -86,5 +121,8 @@ Partial Class BookAppointment
     Friend WithEvents panelMain As Panel
     Friend WithEvents panelHeader As Panel
     Friend WithEvents lblTitle As Label
-    Friend WithEvents btnRegister As Button
+    Friend WithEvents btnBack As Button
+    Friend WithEvents dtpDate As DateTimePicker
+    Friend WithEvents lblSubheading As Label
+    Friend WithEvents btnCheckAvailability As Button
 End Class

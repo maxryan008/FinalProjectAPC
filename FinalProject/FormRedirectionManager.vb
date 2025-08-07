@@ -43,7 +43,6 @@ Module FormRedirectionManager
         ElseIf intArgument = 1 Then
             'Register form creation
             Dim frmRegister = New Login
-            frmRegister.txtPassword.PasswordChar = "﷽"
             frmRegister.btnLogin.Text = "Register"
             frmRegister.Text = "Register Form"
             frmRegister.intType = 1

@@ -43,4 +43,36 @@
         btnRegister.Show()
         Me.session = Nothing
     End Sub
+
+    Private Sub btnCalender_Click(sender As Object, e As EventArgs) Handles btnCalender.Click
+        If session Is Nothing Then
+            MsgBox("Please Login First!")
+        Else
+            FormRedirectionManager.redirect(Me, Calendar)
+        End If
+    End Sub
+
+    Private Sub btnBookAppointment_Click(sender As Object, e As EventArgs) Handles btnBookAppointment.Click
+        If session Is Nothing Then
+            MsgBox("Please Login First!")
+        Else
+            FormRedirectionManager.redirect(Me, BookAppointment)
+        End If
+    End Sub
+
+    Private Sub btnHistory_Click(sender As Object, e As EventArgs) Handles btnHistory.Click
+
+    End Sub
+
+    Private Sub btnRecommendations_Click(sender As Object, e As EventArgs) Handles btnRecommendations.Click
+        If session Is Nothing Then
+            MsgBox("Please Login First!")
+        Else
+            FormRedirectionManager.redirect(Me, Recommendations)
+        End If
+    End Sub
+
+    Private Sub btnAllVets_Click(sender As Object, e As EventArgs) Handles btnAllVets.Click
+
+    End Sub
 End Class
