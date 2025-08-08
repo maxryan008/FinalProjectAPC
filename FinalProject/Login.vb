@@ -41,8 +41,8 @@ Public Class Login
     End Sub
 
     'Redirect to main menu
-    Private Sub Form_Closed(sender As Object, e As EventArgs) Handles MyBase.FormClosed
+    Private Sub Form_Closed(sender As Object, e As EventArgs)
         'Already closed so dont close again otherwise crash will occur
-        FormRedirectionManager.redirect(Me, MainMenu)
+        redirect(Me, MainMenu)
     End Sub
 End Class
