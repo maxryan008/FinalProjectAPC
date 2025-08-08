@@ -1,0 +1,15 @@
+<vets>
+  <location name="Melbourne">
+    <vet name="Dr. Smith">
+      <specialisation>Specialises in dogs</specialisation>
+    </vet>
+    <vet name="Dr. Jane">
+      <specialisation>Specialises in cats</specialisation>
+    </vet>
+  </location>
+  <location name="Sydney">
+    <vet name="Dr. Brown">
+      <specialisation>Specialises in birds</specialisation>
+    </vet>
+  </location>
+</vets>
